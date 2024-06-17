@@ -35,6 +35,7 @@ jobs:
           release_name: ${{ steps.buildfl.outputs.RELEASE_NAME }}
           body: |
             FLTK v${{ steps.buildfl.outputs.FLTK_VERSION }}
+            Build Options: {{ steps.buildfl.outputs.BUILD_INFO }}
           
       - name: upload
         id: upload
