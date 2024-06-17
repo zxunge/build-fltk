@@ -24,7 +24,7 @@ cd fltk-${FLTK_VERSION}
 mingw32-make
 mingw32-make install
 
-7zr a -mx9 -mqs=on -mmt=on /home/${NAME}.7z /home/FLTK
+7zr a -mx9 -mqs=on -mmt=on /home/${NAME}.7z /home/fltk-${FLTK_VERSION}
 
 if [[ -v GITHUB_WORKFLOW ]]; then
   echo "OUTPUT_BINARY=${HOME}/${NAME}.7z" >> $GITHUB_OUTPUT
