@@ -22,6 +22,7 @@ cd fltk-${FLTK_VERSION}
 
 ./configure --prefix=/home/FLTK ${BUILD_INFO}
 mingw32-make
+mingw32-make install
 
 7zr a -mx9 -mqs=on -mmt=on /home/${NAME}.7z /home/FLTK
 
