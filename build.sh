@@ -19,7 +19,7 @@ tar -jxf fltk-${FLTK_VERSION}-source.tar.bz2
 cd fltk-${FLTK_VERSION}
 
 ./configure --prefix=/home/FLTK
-make
+mingw32-make
 
 7zr a -mx9 -mqs=on -mmt=on /home/${NAME}.7z /home/fltk-${FLTK_VERSION}/lib
 
