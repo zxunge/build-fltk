@@ -5,6 +5,7 @@ set -eux
 FLTK_VERSION=1.3.9
 NAME=FLTK-${FLTK_VERSION}
 HOME=$(cygpath -m /home)
+BUILD_NO=2
 
 # Install dependencies
 pacman -Syy
@@ -18,7 +19,7 @@ wget https://www.fltk.org/pub/fltk/${FLTK_VERSION}/fltk-${FLTK_VERSION}-source.t
 tar -jxf fltk-${FLTK_VERSION}-source.tar.bz2
 cd fltk-${FLTK_VERSION}
 
-./configure --prefix=/home/FLTK
+./configure --prefix=/home/FLTK --enable-threads --enable-debug
 mingw32-make
 
 7zr a -mx9 -mqs=on -mmt=on /home/${NAME}.7z /home/fltk-${FLTK_VERSION}/lib
