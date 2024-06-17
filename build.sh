@@ -6,7 +6,7 @@ FLTK_VERSION=1.3.9
 NAME=FLTK-${FLTK_VERSION}
 HOME=$(cygpath -m /home)
 BUILD_NO=2
-BUILD_INFO=--enable-threads --enable-debug
+BUILD_INFO="--enable-threads --enable-debug"
 
 # Install dependencies
 pacman -Syy
